@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Fortune Teller</title>
+	</head>
+
+	<body>
+		<p>Click here to get your fortune: </p>
+		<input type="submit" value ="Fortune" onclick="tellFortune()">
+		<br>
+		<p id="fortune">~Fortune~</p>
+
+		<script>
+			function tellFortune() {
+				var fortuneNumber = 0;
+				var fortune = "";
+				fortuneNumber = Math.round(Math.random()*10);
+
+				switch (fortuneNumber) {
+					case 0:
+						fortune = "You will have a good day!";
+						break;
+					case 1:
+						fortune = "You will have a terrible day!";
+						break;
+					case 2:
+						fortune = "You are going to win a prize today!";
+						break;
+					case 3:
+						fortune = "You will get your wallet stolen today!";
+						break;
+					case 4:
+						fortune = "You will find a large sum of money today!";
+						break;
+					case 5:
+						fortune = "Watch where you are going today, you might get lost!";
+						break;
+					case 6:
+						fortune = "You will win a free trip to a destination of your choice!";
+						break;
+					case 7:
+						fortune = "Your future looks bright!";
+						break;
+					case 8:
+						fortune = "Your future looks dull!";
+						break;
+					case 9:
+						fortune = "You are going to get a promotion today!";
+						break;
+					case 10:
+						fortune = "Your boss is going to start paying you less!";
+						break;
+					default:
+						fortune = "You broke it, way to go.";
+				}
+				document.getElementById('fortune').innerHTML = fortune;
+			}
+		</script>
+	</body>
+</html>
